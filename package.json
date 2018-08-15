@@ -8,6 +8,7 @@
     "egg-cors": "^2.1.0",
     "egg-scripts": "^2.5.0",
     "ipfs-api": "^23.0.0",
+    "is-ipfs": "^0.4.2",
     "orbit-db": "^0.19.9"
   },
   "devDependencies": {

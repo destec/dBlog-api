@@ -28,7 +28,7 @@ class DbService extends Service {
 
   async getAuthorDetailDb() {
     if (!this.authorDetailDb) {
-      this.authorDetailDb = await this.orbit.keyvalue('dblog_author_details');
+      this.authorDetailDb = await this.orbit.docs('dblog_author_details');
       await this.authorDetailDb.load();
     }
     return this.authorDetailDb;
