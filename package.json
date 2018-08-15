@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "egg": "^2.2.1",
+    "egg-cors": "^2.1.0",
     "egg-scripts": "^2.5.0",
     "ipfs-api": "^23.0.0",
     "orbit-db": "^0.19.9"
@@ -20,8 +21,8 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-dblog-api",
-    "stop": "egg-scripts stop --title=egg-server-dblog-api",
+    "start": "egg-scripts start --daemon --title=dblog-api",
+    "stop": "egg-scripts stop --title=dblog-api",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
