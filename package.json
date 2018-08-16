@@ -4,11 +4,14 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "@0xproject/web3-wrapper": "^1.2.0",
     "egg": "^2.2.1",
     "egg-cors": "^2.1.0",
     "egg-scripts": "^2.5.0",
     "ipfs-api": "^23.0.0",
     "is-ipfs": "^0.4.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
     "orbit-db": "^0.19.9"
   },
   "devDependencies": {

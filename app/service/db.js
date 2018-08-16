@@ -20,7 +20,9 @@ class DbService extends Service {
 
   async getAuthorDb() {
     if (!this.authorDb) {
-      this.authorDb = await this.orbit.log('dblog_authors');
+      this.authorDb = await this.orbit.docs('dblog_authors', {
+        indexBy: 'address',
+      });
       await this.authorDb.load();
     }
     return this.authorDb;
