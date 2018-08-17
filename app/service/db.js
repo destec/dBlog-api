@@ -36,21 +36,21 @@ class DbService extends Service {
     return this.authorDetailDb;
   }
 
-  async getPostDb(pid) {
-    if (!this.postDb) this.postDb = await this.orbit.docs(`dblog_posts_${pid}`);
+  async getPostDb(aid) {
+    if (!this.postDb) this.postDb = await this.orbit.log(`dblog_posts_${aid}`);
     return this.postDb;
   }
 
-  async getPostHistoryDb(pid) {
+  async getPostHistoryDb(aid) {
     if (!this.postHistoryDb)
-      this.postHistoryDb = await this.orbit.log(`dblog_posts_history_${pid}`);
+      this.postHistoryDb = await this.orbit.log(`dblog_posts_history_${aid}`);
     return this.postHistoryDb;
   }
 
-  async getPostCounterDb(pid) {
+  async getPostCounterDb(aid) {
     if (!this.postCounterDb)
       this.postCounterDb = await this.orbit.counter(
-        `dblog_posts_counter_${pid}`,
+        `dblog_posts_counter_${aid}`,
       );
     return this.postCounterDb;
   }
