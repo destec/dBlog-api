@@ -5,9 +5,11 @@ const _ = require('lodash');
 
 class PostController extends Controller {
   async getUserPosts() {
-    const aid = this.ctx.params.address;
-    const postDb = await this.service.db.getPostDb(aid);
-    // const result = await postDb.
+    const address = this.ctx.params.address;
+    const authorDb = await this.service.db.getAuthorDb();
+    const existed = await authorDb.query(
+      _author => _author.address === address,
+    );
   }
 }
 
