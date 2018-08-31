@@ -29,7 +29,7 @@ class AuthorController extends Controller {
 
   async findByAddress() {
     const address = this.ctx.params.address;
-    if (!Web3.isAddress(address)) return (this.ctx.status = 400);
+    // if (!Web3.isAddress(address)) return (this.ctx.status = 400);
     const authorDb = await this.ctx.service.db.getAuthorDb();
     const detail = authorDb.query(author => author.address === address);
     this.ctx.body = detail;

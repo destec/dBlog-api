@@ -37,7 +37,8 @@ class DbService extends Service {
   }
 
   async getPostDb(aid) {
-    if (!this.postDb) this.postDb = await this.orbit.log(`dblog_posts_${aid}`);
+    this.postDb = await this.orbit.log(`dblog_posts`);
+    // if (!this.postDb) this.postDb = await this.orbit.log(`dblog_posts_${aid}`);
     return this.postDb;
   }
 
