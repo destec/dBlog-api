@@ -15,8 +15,9 @@ class PostController extends Controller {
     this.ctx.body = result;
   }
 
-  async addPosts() {
+  async createPost() {
     const post = this.ctx.request.body;
+    this.ctx.body = { result: 'ok' };
   }
 }
 
